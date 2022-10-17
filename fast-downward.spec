@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name: fast-downward
 Version: 0.0.0
 Release: 1%{?dist}
@@ -24,14 +26,17 @@ python3 build.py
 
 
 %install
-mkdir -p opt/downward
-cp fast-downward.py opt/downward
+mkdir -p %{buildroot}/opt/downward
+cp fast-downward.py %{buildroot}/opt/downward
+cp -r driver %{buildroot}/opt/downward/driver
+cp -r builds %{buildroot}/opt/downward/builds
 
 %check
 
 
 %files
-/opt/downward/fast-downward.py
+/opt/downward
+%license LICENSE.md
 
 
 %changelog
