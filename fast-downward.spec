@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: fast-downward
-Version: 0.0.0
+Version: 0.0.1
 Release: 1%{?dist}
 Summary: Fast Downward is a domain-independent classical planning system.
 
@@ -40,4 +40,7 @@ cp -r builds %{buildroot}/opt/downward/builds
 
 
 %changelog
+* Mon Oct 17 2022 Dawid Stasiak <dawid.stasiak21@gmail.com> 0.0.1-1
+- new package built with tito
+
 
